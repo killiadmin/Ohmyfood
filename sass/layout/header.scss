@@ -1,0 +1,10 @@
+@import "../utils/utils.scss";
+
+header {
+    font-family: $font-title;
+    text-align: center;
+    padding: 8px;
+    margin: 0;
+    position: relative;
+    @include box-shadow;
+}
