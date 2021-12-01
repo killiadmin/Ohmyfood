@@ -13,14 +13,14 @@ body {
 header {
   font-family: "Shrikhand", "cursive";
   text-align: center;
-  box-shadow: 0px 3px 3px 1px #dbdbdb;
+  box-shadow: 0px 3px 8px 1px #cecece;
   padding: 8px;
   margin: 0;
   position: relative;
 }
 
 main .localisation {
-  background-color: #f3f3f3;
+  background-color: #e0e0e0;
   color: #4e4e4e;
   text-align: center;
   padding: 2px;
@@ -31,6 +31,35 @@ main .localisation {
 }
 main .localisation i {
   font-size: 28px;
+}
+main .reservation {
+  text-align: center;
+  background-color: #f2f2f2;
+  padding: 50px;
+}
+main .reservation h2 {
+  margin-top: 0;
+  font-size: 28px;
+}
+main .reservation p {
+  font-size: 16px;
+}
+main .reservation button {
+  color: #fff;
+  background-image: linear-gradient(to top, #9356DC, #FF79DA);
+  font-weight: 300;
+  font-size: 24px;
+  padding: 16px 32px;
+  border: none;
+  border-radius: 32px;
+  box-shadow: 0 1px 8px 0 #000000;
+  transition: transform 200ms;
+  margin-top: 32px;
+}
+main .reservation button:hover {
+  transform: scale(1.02);
+  cursor: pointer;
+  opacity: 0.9;
 }
 
 /*# sourceMappingURL=style.css.map */
