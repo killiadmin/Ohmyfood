@@ -47,7 +47,7 @@ main .reservation p {
 main .reservation button {
   color: #fff;
   background-image: linear-gradient(to top, #9356DC, #FF79DA);
-  font-weight: 300;
+  font-weight: 500;
   font-size: 24px;
   padding: 16px 32px;
   border: none;
