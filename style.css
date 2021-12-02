@@ -67,26 +67,49 @@ header {
   opacity: 0.9;
 }
 
-.function ol {
+.nav_restaurant ol {
   display: flex;
-  flex-wrap: wrap;
-  gap: 16px;
+  gap: 32px;
 }
-@media (max-width: 772px) {
-  .function ol {
+@media (max-width: 902px) {
+  .nav_restaurant ol {
     flex-direction: column;
   }
 }
-.function li {
+.nav_restaurant ol li:hover i {
+  color: #9356DC;
+}
+.nav_restaurant li {
+  position: relative;
   background-color: #f6f6f6;
-  padding: 20px 32px;
+  padding: 28px 32px;
   flex-grow: 1;
   border-radius: 16px;
   cursor: pointer;
+  list-style-type: none;
   box-shadow: 0px 3px 8px 1px #cecece;
 }
-.function li:hover {
+.nav_restaurant li:hover {
   transform: scale(1.02);
+  background: #f2e8ff;
+}
+.nav_restaurant li i.fas {
+  margin-right: 16px;
+  color: grey;
+  font-size: 24px;
+}
+.nav_restaurant li span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: 24px;
+  left: -16px;
+  height: 32px;
+  width: 32px;
+  border-radius: 50%;
+  background-color: #9356DC;
+  color: #fff;
 }
 
 /*# sourceMappingURL=style.css.map */
