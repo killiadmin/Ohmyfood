@@ -1,0 +1,53 @@
+.menus{
+    background: $color-grey;
+    padding: 32px 24px;
+
+    h2{
+        margin-bottom: 32px;
+    }
+
+    &__restaurant{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        gap: 32px;
+    }
+    .new{
+        position: relative;
+    }
+    .new::before{
+        content: "Nouveau";
+        position: absolute;
+        height: 32px;
+        width: 80px;
+        background-color: $color-tertiary;
+        color: darken($color: $color-tertiary, $amount: 40%);
+        text-align: center;
+        line-height: 30px;
+        right: 16px;
+        top: 16px;
+        border-radius: 3px;
+    }
+    .card_restaurant{
+        min-height: 195px;
+        min-width: 23%;
+        @media (max-width: 1400px){
+            min-width: 321px;
+        }
+        @media (max-width: 400px){
+            min-height: 175px;
+            min-width: 260px;
+        }        
+        & .card__image{
+            background-size: cover;
+            border-radius: 16px;
+            height: 100%;
+        }
+
+        @for $i from 1 through 4 {
+            & .menu-#{$i}{
+                background-image: url(/images/menu-#{$i}.jpg);
+            }
+        }
+    }
+}

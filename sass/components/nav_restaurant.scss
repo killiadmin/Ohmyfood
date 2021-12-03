@@ -1,19 +1,26 @@
 @import "../utils/transform.scss";
 
 .nav_restaurant {
+    padding: 24px 24px;
+
+    & h2{
+        margin-left: 26px;
+    }
+
     & ol{
         display: flex;
         gap: 32px;
-        @media (max-width: 902px) {
+        @media (max-width: 1000px) {
             flex-direction: column;
         }
         & li:hover i{
             color: $color-primary;
         }
     }
+
     & li{
         position: relative;
-        background-color: #f6f6f6;
+        background-color: $color-grey;
         padding: 28px 32px;
         flex-grow: 1;
         border-radius: 16px;
@@ -29,6 +36,7 @@
             color: grey; 
             font-size: 24px;
         }
+        
             & span{
                 display: flex;
                 justify-content: center;
