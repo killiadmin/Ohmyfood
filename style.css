@@ -10,6 +10,16 @@ body {
   font-family: "Roboto", "sans-serif";
 }
 
+h3,
+p {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
 header {
   font-family: "Shrikhand", "cursive";
   text-align: center;
@@ -144,6 +154,7 @@ header {
   border-radius: 3px;
 }
 .menus .card_restaurant {
+  margin-bottom: 80px;
   min-height: 195px;
   min-width: 23%;
 }
@@ -160,7 +171,7 @@ header {
 }
 .menus .card_restaurant .card__image {
   background-size: cover;
-  border-radius: 16px;
+  border-radius: 16px 16px 0 0;
   height: 100%;
 }
 .menus .card_restaurant .menu-1 {
@@ -174,6 +185,45 @@ header {
 }
 .menus .card_restaurant .menu-4 {
   background-image: url(/images/menu-4.jpg);
+}
+.menus .card_restaurant .card__info {
+  position: relative;
+  background-color: #fff;
+  padding: 4px;
+  border-radius: 0 0 16px 16px;
+}
+.menus .card_restaurant .card__info h3,
+.menus .card_restaurant .card__info p {
+  margin: 0px 8px 8px 8px;
+}
+.menus .card_restaurant .card__info h3 {
+  padding-top: 8px;
+}
+.menus .card_restaurant .card__info i {
+  font-size: 32px;
+  position: absolute;
+  right: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+footer {
+  background-color: #353535;
+  color: #fff;
+  padding: 16px 32px;
+}
+footer h2 {
+  font-family: "Shrikhand", "cursive";
+  font-weight: 500;
+}
+footer p {
+  padding: 6px;
+}
+footer a:hover {
+  text-decoration: underline;
+}
+footer i {
+  margin-right: 12px;
 }
 
 /*# sourceMappingURL=style.css.map */

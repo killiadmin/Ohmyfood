@@ -11,3 +11,13 @@
 body{
     font-family: $font-txt;
 }
+
+h3,
+p{
+    margin: 0;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
