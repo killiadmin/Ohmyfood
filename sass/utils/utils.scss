@@ -1,10 +1,17 @@
+// Color maquette
+
 $color-primary: #9356DC;
 $color-secondary: #FF79DA;
 $color-tertiary: #99E2D0;
 $color-grey: #f2f2f2;
 
+
+// Font family
+
 $font-title: "Shrikhand", "cursive";
 $font-txt: "Roboto", "sans-serif";
+
+// Box shadow
 
 @mixin box-shadow {
     box-shadow: 0px 3px 8px 1px #cecece;

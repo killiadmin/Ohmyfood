@@ -86,6 +86,7 @@ header {
 @media (max-width: 1000px) {
   .nav_restaurant ol {
     flex-direction: column;
+    padding-left: 5px;
   }
 }
 .nav_restaurant ol li:hover i {
@@ -175,16 +176,16 @@ header {
   height: 100%;
 }
 .menus .card_restaurant .menu-1 {
-  background-image: url(/images/menu-1.jpg);
+  background-image: url("images/menu-1.jpg");
 }
 .menus .card_restaurant .menu-2 {
-  background-image: url(/images/menu-2.jpg);
+  background-image: url("images/menu-2.jpg");
 }
 .menus .card_restaurant .menu-3 {
-  background-image: url(/images/menu-3.jpg);
+  background-image: url("images/menu-3.jpg");
 }
 .menus .card_restaurant .menu-4 {
-  background-image: url(/images/menu-4.jpg);
+  background-image: url("images/menu-4.jpg");
 }
 .menus .card_restaurant .card__info {
   position: relative;
@@ -203,8 +204,19 @@ header {
   font-size: 32px;
   position: absolute;
   right: 16px;
-  top: 50%;
-  transform: translateY(-50%);
+  top: 21px;
+}
+.menus .card_restaurant .card__info .heart_like {
+  color: transparent;
+  background-image: linear-gradient(#9356DC, #FF79DA);
+  background-clip: text;
+  -webkit-background-clip: text;
+  opacity: 0;
+  transition: all 200ms ease-in-out;
+}
+.menus .card_restaurant .card__info .heart_like:hover {
+  opacity: 1;
+  transform: scale(1.08);
 }
 
 footer {

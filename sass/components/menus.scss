@@ -47,9 +47,10 @@
 
         @for $i from 1 through 4 {
             & .menu-#{$i}{
-                background-image: url(/images/menu-#{$i}.jpg);
+                background-image: url("images/menu-#{$i}.jpg");
             }
         }
+
         & .card__info{
             position: relative;
             background-color: #fff;
@@ -66,9 +67,23 @@
                 font-size: 32px;
                 position: absolute;
                 right: 16px;
-                top: 50%;
-                transform: translateY(-50%);
+                top: 21px;
+
             }
+            & .heart_like {
+                color: transparent;
+                background-image: linear-gradient($color-primary, $color-secondary);
+                background-clip: text;
+                -webkit-background-clip: text; //"Compatibilité pour les naviguateurs" 
+                opacity: 0;
+                transition: all 200ms ease-in-out;
+            }
+
+            & .heart_like:hover{
+                opacity: 1;
+                transform: scale(1.08);
+            }
+
         }
     }
 }
