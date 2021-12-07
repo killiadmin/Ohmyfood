@@ -1,4 +1,4 @@
-@import "../utils/transform.scss";
+@import "../utils/mixins.scss";
 
 .nav_restaurant {
     padding: 24px 24px;
@@ -27,6 +27,7 @@
         border-radius: 16px;
         cursor: pointer;
         list-style-type: none;
+        transition: all 200ms;
         @include box-shadow;
         &:hover{
             @include transform;

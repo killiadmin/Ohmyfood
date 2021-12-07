@@ -1,3 +1,5 @@
+@import "../utils/mixins.scss";
+
 .menus{
     background: $color-grey;
     padding: 32px 24px;
@@ -32,13 +34,19 @@
         margin-bottom: 80px;
         min-height: 195px;
         min-width: 23%;
+        transition: all 400ms;
         @media (max-width: 1400px){
             min-width: 321px;
         }
         @media (max-width: 400px){
             min-height: 175px;
             min-width: 260px;
-        }        
+        } 
+
+        &:hover{
+            transform: scale(1.04);
+        } 
+              
         & .card__image{
             background-size: cover;
             border-radius: 16px 16px 0 0;
@@ -70,20 +78,7 @@
                 top: 21px;
 
             }
-            & .heart_like {
-                color: transparent;
-                background-image: linear-gradient($color-primary, $color-secondary);
-                background-clip: text;
-                -webkit-background-clip: text; //"Compatibilité pour les naviguateurs" 
-                opacity: 0;
-                transition: all 200ms ease-in-out;
-            }
-
-            & .heart_like:hover{
-                opacity: 1;
-                transform: scale(1.08);
-            }
-
+            @include heart;
         }
     }
 }

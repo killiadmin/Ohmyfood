@@ -1,0 +1,29 @@
+// Transform
+
+@mixin transform {
+    transform: scale(1.02);
+}
+
+// Box_shadow
+
+@mixin box-shadow {
+    box-shadow: 0px 3px 8px 1px #cecece;
+}
+
+// Heart_Like_Transform
+
+@mixin heart{
+    & .heart_like {
+        color: transparent;
+        background-image: linear-gradient($color-primary, $color-secondary);
+        background-clip: text;
+        -webkit-background-clip: text; //"Compatibilité pour les naviguateurs" 
+        opacity: 0;
+        transition: all 200ms ease-in-out;
+    }
+    
+    & .heart_like:hover{
+        opacity: 1;
+        transform: scale(1.08);
+    }    
+}
