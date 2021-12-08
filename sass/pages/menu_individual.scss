@@ -48,14 +48,19 @@ main{
     
     & .group_food{
         margin-bottom: 50px;
+        overflow: hidden;
+        white-space: nowrap;
         & h3{
             font-weight: initial;
+            border-bottom: 3px solid $color-tertiary;
+            max-width: 48px;
         }
     }
     & .bag_food{
         display: flex;
         flex-direction: row;
         background-color: #fff;
+        margin: 11px;
         // padding: 8px;
         border-radius: 16px;
         overflow: hidden;
@@ -69,9 +74,12 @@ main{
     }
     & .items_food {
         padding: 8px;
+        overflow: hidden;
         & h4, 
         p{
             margin: 10px;
+            overflow: hidden;
+            text-overflow: ellipsis;
         }
     }
     & .price {
