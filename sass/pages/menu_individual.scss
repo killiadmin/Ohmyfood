@@ -1,13 +1,18 @@
 @import "../utils/mixins.scss";
 @import "../utils/utils.scss";
+@import "../utils/animation.scss";
 
 .screen_resto{
-    max-width: 100%;
+    width: 100%;
+    height: 562px;
+    object-fit: cover;
+    // object-position: bottom;
+    display: block;
 
 }
 
 main{
-    & h2{
+    & .title_individual{
         font-family: $font-title;
         margin: 30px auto 30px 15px;
         font-size: 30px;
@@ -15,16 +20,78 @@ main{
 }
 
 .box_heart{
+    background-color: $color-grey;
+    margin-top: -32px;
+    border-radius: 32px 32px 0 0;
     display: flex;
     flex-direction: row;
-    justify-content: center;
     align-items: center;
     position: relative;   
     & i{
         position: absolute;
         right: 16px;
-        top: 25px;
+        top: 37px;
         font-size: 32px;
     }
     @include heart;
+}
+
+.box_food{
+    background-color: $color-grey;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 0 16px 0 16px;
+    gap: 16px;
+    @media (max-width:1000px){
+        grid-template-columns: 1fr;
+    }
+    
+    & .group_food{
+        margin-bottom: 50px;
+        & h3{
+            font-weight: initial;
+        }
+    }
+    & .bag_food{
+        display: flex;
+        flex-direction: row;
+        background-color: #fff;
+        // padding: 8px;
+        border-radius: 16px;
+        overflow: hidden;
+        @include box-shadow;
+        &:hover .price_valid{
+            margin-right: 0;
+            & .fa-check-circle{
+                animation: validate 500ms ease-in-out;
+            }
+        }
+    }
+    & .items_food {
+        padding: 8px;
+        & h4, 
+        p{
+            margin: 10px;
+        }
+    }
+    & .price {
+        display: flex;
+        margin-left: auto;
+        align-items: flex-end;
+        font-weight: 900;
+        margin-right: 20px;
+    }
+    & .price_valid{
+        display: flex;
+        align-items: center;
+        background-color: $color-tertiary;
+        border-radius: 0 16px 16px 0;
+        margin-right: -68px;
+        padding: 20px;
+        font-size: 27px;
+        transition: all 500ms;
+        & .fa-check-circle{
+            color: #fff;
+        }
+    }
 }
