@@ -25,5 +25,10 @@
     & .heart__like:hover{
         opacity: 1;
         transform: scale(1.08);
-    }    
+    }
+    
+    & .heart__like:active{
+        color: red;
+        transition: 0;
+    }
 }

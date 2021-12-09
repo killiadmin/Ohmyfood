@@ -9,6 +9,7 @@
 body {
   font-family: "Roboto", "sans-serif";
   margin: 0;
+  min-width: 280px;
 }
 
 a {
@@ -55,18 +56,19 @@ header {
 }
 .reservation p {
   font-size: 16px;
+  margin: 40px 16px 40px 16px;
+  color: #4e4e4e;
 }
 .reservation button {
   color: #fff;
   background-image: linear-gradient(to top, #9356DC, #FF79DA);
-  font-weight: 500;
+  font-weight: 400;
   font-size: 24px;
   padding: 16px 32px;
   border: none;
   border-radius: 32px;
-  box-shadow: 0 1px 8px 0 #000000;
   transition: transform 200ms;
-  margin-top: 32px;
+  box-shadow: 0px 3px 8px 1px #cecece;
 }
 .reservation button:hover {
   transform: scale(1.02);
@@ -164,10 +166,10 @@ header {
 }
 @media (max-width: 1400px) {
   .menus__restaurant--card {
-    min-width: 321px;
+    min-width: 342px;
   }
 }
-@media (max-width: 400px) {
+@media (max-width: 350px) {
   .menus__restaurant--card {
     min-height: 175px;
     min-width: 260px;
@@ -225,6 +227,10 @@ header {
   opacity: 1;
   transform: scale(1.08);
 }
+.menus__restaurant--card .menus__restaurant--note .heart__like:active {
+  color: red;
+  transition: 0;
+}
 
 footer {
   background-color: #353535;
@@ -255,6 +261,25 @@ footer i {
     transform: rotate(0deg);
   }
 }
+header {
+  position: relative;
+}
+header .return {
+  position: absolute;
+  top: 38px;
+  left: 44px;
+  font-size: xx-large;
+}
+@media (max-width: 1000px) {
+  header .return {
+    top: 18px;
+    left: 20px;
+  }
+}
+header .return:hover {
+  color: #99E2D0;
+}
+
 .preview__meal {
   width: 100%;
   height: 562px;
@@ -309,6 +334,10 @@ main .box__heart--title {
 .box__heart .heart__like:hover {
   opacity: 1;
   transform: scale(1.08);
+}
+.box__heart .heart__like:active {
+  color: red;
+  transition: 0;
 }
 
 .category {
@@ -391,16 +420,18 @@ main .box__heart--title {
   color: #fff;
 }
 .category--button {
-  grid-column: 2/3;
-  background-image: linear-gradient(#FF79DA, #9356DC);
   color: #fff;
-  font-weight: bold;
-  text-align: center;
-  padding: 16px 48px 16px 48px;
-  margin: 32px auto 48px auto;
-  border-radius: 26px;
-  transition: all 500ms;
+  background-image: linear-gradient(to top, #9356DC, #FF79DA);
+  font-weight: 400;
+  font-size: 24px;
+  padding: 16px 32px;
+  border: none;
+  border-radius: 32px;
+  transition: transform 200ms;
   box-shadow: 0px 3px 8px 1px #cecece;
+  grid-column: 2/3;
+  margin: 32px auto 48px auto;
+  transition: all 500ms;
 }
 @media (max-width: 1000px) {
   .category--button {

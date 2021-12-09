@@ -1,0 +1,13 @@
+// BUTTON GRADIENT
+
+@mixin master-button {
+    color: #fff;
+    background-image: linear-gradient(to top, $color-primary, $color-secondary);
+    font-weight: 400;
+    font-size: 24px;
+    padding: 16px 32px;
+    border: none;
+    border-radius: 32px;
+    transition: transform 200ms;
+    @include box-shadow;
+}

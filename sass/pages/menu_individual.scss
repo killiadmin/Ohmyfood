@@ -2,6 +2,23 @@
 @import "../utils/utils.scss";
 @import "../utils/animation.scss";
 
+header{
+    position: relative;
+    & .return{
+        position: absolute;
+        top: 38px;
+        left: 44px;
+        font-size: xx-large;
+        @media (max-width: 1000px){
+            top: 18px;
+            left: 20px;
+        }
+        &:hover{
+            color: $color-tertiary;
+        }
+    }
+}
+
 .preview__meal{
     width: 100%;
     height: 562px;
@@ -119,17 +136,11 @@ main{
             color: #fff;
         }
     }
-    &--button{
+    &--button {
+        @include master-button;
         grid-column: 2 / 3;
-        background-image: linear-gradient($color-secondary, $color-primary);
-        color: #fff;
-        font-weight: bold;
-        text-align: center;
-        padding: 16px 48px 16px 48px;
         margin: 32px auto 48px auto;
-        border-radius: 26px;
         transition: all 500ms;
-        @include box-shadow;
         @media (max-width:1000px){
             grid-column: 1 / -1;
         }
