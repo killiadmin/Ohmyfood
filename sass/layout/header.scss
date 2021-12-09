@@ -8,4 +8,9 @@ header {
     margin: 0;
     position: relative;
     @include box-shadow;
+    & h1 {
+        @media (max-width:1000px) {
+            margin: 0;
+        }
+    }
 }

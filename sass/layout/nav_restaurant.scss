@@ -1,6 +1,7 @@
 @import "../utils/mixins.scss";
+@import "../utils/utils.scss";
 
-.nav_restaurant {
+.nav__restaurant {
     padding: 24px 24px;
 
     & h2{

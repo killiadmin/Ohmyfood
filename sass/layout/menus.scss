@@ -30,7 +30,7 @@
         top: 16px;
         border-radius: 3px;
     }
-    .card_restaurant{
+    &__restaurant--card{
         margin-bottom: 80px;
         min-height: 195px;
         min-width: 23%;
@@ -47,7 +47,7 @@
             transform: scale(1.04);
         } 
               
-        & .card__image{
+        & .menus__restaurant--image{
             background-size: cover;
             border-radius: 16px 16px 0 0;
             height: 100%;
@@ -59,11 +59,12 @@
             }
         }
 
-        & .card__info{
+        & .menus__restaurant--note{
             position: relative;
             background-color: #fff;
             padding: 4px;
             border-radius: 0 0 16px 16px;
+            @include box-shadow;
             h3, 
             p {
                 margin: 0px 8px 8px 8px;

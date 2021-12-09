@@ -13,7 +13,7 @@
 // Heart_Like_Transform
 
 @mixin heart{
-    & .heart_like {
+    & .heart__like {
         color: transparent;
         background-image: linear-gradient($color-primary, $color-secondary);
         background-clip: text;
@@ -22,7 +22,7 @@
         transition: all 200ms ease-in-out;
     }
     
-    & .heart_like:hover{
+    & .heart__like:hover{
         opacity: 1;
         transform: scale(1.08);
     }    

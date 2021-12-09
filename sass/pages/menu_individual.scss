@@ -2,24 +2,30 @@
 @import "../utils/utils.scss";
 @import "../utils/animation.scss";
 
-.screen_resto{
+.preview__meal{
     width: 100%;
     height: 562px;
     object-fit: cover;
     // object-position: bottom;
     display: block;
+    @media (max-width:1000px){
+        height: 204px;
+    }
 
 }
 
 main{
-    & .title_individual{
+    & .box__heart--title{
         font-family: $font-title;
         margin: 30px auto 30px 15px;
         font-size: 30px;
+        @media (max-width: 280px){
+            font-size: 24px;
+        }
     }
 }
 
-.box_heart{
+.box__heart{
     background-color: $color-grey;
     margin-top: -32px;
     border-radius: 32px 32px 0 0;
@@ -32,11 +38,14 @@ main{
         right: 16px;
         top: 37px;
         font-size: 32px;
+        @media (max-width: 280px){
+            font-size: 26px;
+        }       
     }
     @include heart;
 }
 
-.box_food{
+.category{
     background-color: $color-grey;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -44,19 +53,27 @@ main{
     gap: 16px;
     @media (max-width:1000px){
         grid-template-columns: 1fr;
+        gap: 0;
     }
     
-    & .group_food{
+    &__formula{
         margin-bottom: 50px;
         overflow: hidden;
         white-space: nowrap;
+        @media (max-width:1000px){
+            margin-bottom: 0;
+        }
         & h3{
             font-weight: initial;
             border-bottom: 3px solid $color-tertiary;
             max-width: 48px;
+            padding-bottom: 4px;
+            @media (max-width:1000px){
+                margin-bottom: 0;            
         }
     }
-    & .bag_food{
+    }
+    &__formula--full{
         display: flex;
         flex-direction: row;
         background-color: #fff;
@@ -65,14 +82,14 @@ main{
         border-radius: 16px;
         overflow: hidden;
         @include box-shadow;
-        &:hover .price_valid{
+        &:hover .category__formula--check{
             margin-right: 0;
             & .fa-check-circle{
                 animation: validate 500ms ease-in-out;
             }
         }
     }
-    & .items_food {
+    &__formula--meal {
         padding: 8px;
         overflow: hidden;
         & h4, 
@@ -82,14 +99,14 @@ main{
             text-overflow: ellipsis;
         }
     }
-    & .price {
+    &__formula--price {
         display: flex;
         margin-left: auto;
         align-items: flex-end;
         font-weight: 900;
         margin-right: 20px;
     }
-    & .price_valid{
+    &__formula--check{
         display: flex;
         align-items: center;
         background-color: $color-tertiary;
@@ -100,6 +117,28 @@ main{
         transition: all 500ms;
         & .fa-check-circle{
             color: #fff;
+        }
+    }
+    &--button{
+        grid-column: 2 / 3;
+        background-image: linear-gradient($color-secondary, $color-primary);
+        color: #fff;
+        font-weight: bold;
+        text-align: center;
+        padding: 16px 48px 16px 48px;
+        margin: 32px auto 48px auto;
+        border-radius: 26px;
+        transition: all 500ms;
+        @include box-shadow;
+        @media (max-width:1000px){
+            grid-column: 1 / -1;
+        }
+        & p{
+            margin: 0;
+        }
+        &:hover{
+            box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+            transform: translate(0, 25%);
         }
     }
 }
