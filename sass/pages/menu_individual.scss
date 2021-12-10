@@ -10,8 +10,8 @@ header{
         left: 44px;
         font-size: xx-large;
         @media (max-width: 1000px){
-            top: 18px;
-            left: 20px;
+            top: 10px;
+            left: 14px;
         }
         &:hover{
             color: $color-tertiary;
@@ -91,6 +91,11 @@ main{
     }
     }
     &__formula--full{
+        @for $i from 1 through 3 {
+            &:nth-child(#{$i}) {
+                animation-delay: 200ms * $i;                
+            } 
+        }
         display: flex;
         flex-direction: row;
         background-color: #fff;
@@ -99,6 +104,10 @@ main{
         border-radius: 16px;
         overflow: hidden;
         @include box-shadow;
+        animation-name: fondue;
+        animation-duration: 2s;
+        animation-fill-mode: both;
+        animation-timing-function: linear;
         &:hover .category__formula--check{
             margin-right: 0;
             & .fa-check-circle{
