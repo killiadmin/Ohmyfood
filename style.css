@@ -105,27 +105,25 @@ header {
 
 .charging {
   position: fixed;
-  background-image: linear-gradient(#99E2D0 60%, #FF79DA, #9356DC);
+  display: grid;
+  place-items: center;
+  background-color: #99E2D0;
   inset: 0;
   z-index: 1;
   opacity: 0.6;
-  animation: charging_out 150ms 3s forwards;
+  animation: charging_out 150ms 2s forwards;
   transform-origin: center;
 }
 .charging .charging__spinner {
   width: 160px;
   height: 160px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  border: 16px solid #99E2D0;
+  display: grid;
+  place-items: center;
+  border: 16px solid #FF79DA;
   border-radius: 50%;
   border-top-color: #9356DC;
   border-bottom-color: #9356DC;
-  animation: spinner 3s ease-in-out;
+  animation: spinner 2s ease-in-out;
   animation-iteration-count: 2;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px, #333333 0px 0px 0px 3px;
 }
@@ -333,7 +331,7 @@ header {
   transform: scale(1.08);
 }
 .menus__restaurant--card .menus__restaurant--note .heart__like:active {
-  color: red;
+  color: #99E2D0;
   transition: 0;
 }
 
@@ -469,7 +467,7 @@ main .box__heart--title {
   transform: scale(1.08);
 }
 .box__heart .heart__like:active {
-  color: red;
+  color: #99E2D0;
   transition: 0;
 }
 

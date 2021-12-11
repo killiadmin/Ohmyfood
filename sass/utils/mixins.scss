@@ -28,7 +28,7 @@
     }
     
     & .heart__like:active{
-        color: red;
+        color: $color-tertiary;
         transition: 0;
     }
 }
