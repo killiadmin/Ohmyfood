@@ -105,9 +105,8 @@ main{
         overflow: hidden;
         @include box-shadow;
         animation-name: fondue;
-        animation-duration: 2s;
+        animation-duration: 1s;
         animation-fill-mode: both;
-        animation-timing-function: linear;
         &:hover .category__formula--check{
             margin-right: 0;
             & .fa-check-circle{
