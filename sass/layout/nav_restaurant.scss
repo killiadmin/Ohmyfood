@@ -28,7 +28,7 @@
         border-radius: 16px;
         cursor: pointer;
         list-style-type: none;
-        transition: all 200ms;
+        transition: transform 200ms;
         @include box-shadow;
         &:hover{
             @include transform;

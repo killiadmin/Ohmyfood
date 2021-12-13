@@ -34,7 +34,7 @@
         margin-bottom: 80px;
         min-height: 195px;
         min-width: 23%;
-        transition: all 400ms;
+        // transition: transform 400ms;
         @media (max-width: 1400px){
             min-width: 342px;
         }
@@ -43,9 +43,9 @@
             min-width: 260px;
         } 
 
-        &:hover{
-            transform: scale(1.04);
-        } 
+        // &:hover{
+        //     transform: scale(1.04);
+        // } 
               
         & .menus__restaurant--image{
             background-size: cover;
@@ -72,14 +72,13 @@
             h3{
                 padding-top: 8px;
             }
-            i {
+            .container {
                 font-size: 32px;
                 position: absolute;
-                right: 16px;
-                top: 21px;
-
+                right: 31px;
+                top: 14px;              
             }
-            @include heart;
         }
+        @include heart;
     }
 }
