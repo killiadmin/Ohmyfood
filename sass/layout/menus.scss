@@ -3,82 +3,79 @@
 .menus{
     background: $color-grey;
     padding: 32px 24px;
-    
-    h2{
+    & h2{
         margin-bottom: 32px;
     }
-
-    &__restaurant{
+    & .full-menus{
         display: flex;
         flex-wrap: wrap;
         justify-content: space-evenly;
         gap: 32px;
-    }
-    .new{
-        position: relative;
-    }
-    .new::before{
-        content: "Nouveau";
-        position: absolute;
-        height: 32px;
-        width: 80px;
-        background-color: $color-tertiary;
-        color: darken($color: $color-tertiary, $amount: 40%);
-        text-align: center;
-        line-height: 30px;
-        right: 16px;
-        top: 16px;
-        border-radius: 3px;
-    }
-    &__restaurant--card{
-        margin-bottom: 80px;
-        min-height: 195px;
-        min-width: 23%;
-        // transition: transform 400ms;
-        @media (max-width: 1400px){
-            min-width: 342px;
-        }
-        @media (max-width: 350px){
-            min-height: 175px;
-            min-width: 260px;
-        } 
-
-        // &:hover{
-        //     transform: scale(1.04);
-        // } 
-              
-        & .menus__restaurant--image{
-            background-size: cover;
-            border-radius: 16px 16px 0 0;
-            height: 100%;
-        }
-
-        @for $i from 1 through 4 {
-            & .menu-#{$i}{
-                background-image: url("images/menu-#{$i}.jpg");
-            }
-        }
-
-        & .menus__restaurant--note{
+        & .alone-menu--new{
             position: relative;
-            background-color: #fff;
-            padding: 4px;
-            border-radius: 0 0 16px 16px;
-            @include box-shadow;
-            h3, 
-            p {
-                margin: 0px 8px 8px 8px;
-            }
-            h3{
-                padding-top: 8px;
-            }
-            .container {
-                font-size: 32px;
-                position: absolute;
-                right: 31px;
-                top: 14px;              
-            }
         }
-        @include heart;
+        & .alone-menu--new::before{
+            content: "Nouveau";
+            position: absolute;
+            height: 32px;
+            width: 80px;
+            background-color: $color-tertiary;
+            color: darken($color: $color-tertiary, $amount: 40%);
+            text-align: center;
+            line-height: 30px;
+            right: 16px;
+            top: 16px;
+            border-radius: 3px;
+        }
+        & .alone-menu{
+            margin-bottom: 80px;
+            min-height: 195px;
+            min-width: 23%;
+            position: relative;
+            @media (max-width: 1400px){
+                min-width: 342px;
+            }
+            @media (max-width: 350px){
+                min-height: 175px;
+                min-width: 260px;
+            }
+            & .container-heart{
+                position: absolute;
+                top: 226px; 
+                right: 39px    
+            } 
+                  
+            &__screen{
+                background-size: cover;
+                border-radius: 16px 16px 0 0;
+                height: 100%;
+            }
+    
+            @for $i from 1 through 4 {
+                & .alone-menu__screen--menu-#{$i}{
+                    background-image: url("images/menu-#{$i}.jpg");
+                }
+            }
+    
+            &__note{
+                position: relative;
+                background-color: #fff;
+                padding: 4px;
+                border-radius: 0 0 16px 16px;
+                @include box-shadow;
+                & h3, 
+                & p {
+                    margin: 0px 8px 8px 8px;
+                }
+                & h3{
+                    padding-top: 8px;
+                }
+                &:hover{
+                    background: #f2e8ff;
+                    color: $color-primary
+                }
+            }
+            @include heart;
+        }
     }
 }

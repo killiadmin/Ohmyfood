@@ -19,7 +19,7 @@ header{
     }
 }
 
-.preview__meal{
+.preview-meal{
     width: 100%;
     height: 562px;
     object-fit: cover;
@@ -49,7 +49,7 @@ main{
     flex-direction: row;
     align-items: center;
     position: relative;   
-    & .container{
+    & .container-heart{
         position: absolute;
         right: 47px;
         top: 39px;
@@ -71,8 +71,7 @@ main{
         grid-template-columns: 1fr;
         gap: 0;
     }
-    
-    &__formula{
+    & .alone-formula{
         margin-bottom: 50px;
         overflow: hidden;
         white-space: nowrap;
@@ -93,8 +92,7 @@ main{
                 background-color: $color-tertiary;
             }
     }
-    }
-    &__formula--full{
+    &__completed{
         @for $i from 1 through 3 {
             &:nth-child(#{$i}) {
                 animation-delay: 200ms * $i;                
@@ -110,42 +108,46 @@ main{
         animation-name: fondue;
         animation-duration: 1s;
         animation-fill-mode: both;
-        &:hover .category__formula--check{
+        &:hover .alone-formula__description--check{
             margin-right: 0;
             & .fa-check-circle{
                 animation: validate 500ms ease-in-out;
             }
         }
-    }
-    &__formula--meal {
-        padding: 8px;
-        overflow: hidden;
-        & h4, 
-        p{
-            margin: 10px;
+        & .alone-formula__description {
+            padding: 8px;
             overflow: hidden;
-            text-overflow: ellipsis;
+            & h4, 
+            p{
+                margin: 10px;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+            & .meal_bold{
+                font-weight: 500;
+            }
+        }
+        & .alone-formula__description--price {
+            display: flex;
+            margin-left: auto;
+            align-items: flex-end;
+            font-weight: 900;
+            margin-right: 20px;
+        }
+        & .alone-formula__description--check{
+            display: flex;
+            align-items: center;
+            background-color: $color-tertiary;
+            border-radius: 0 16px 16px 0;
+            margin-right: -68px;
+            padding: 20px;
+            font-size: 27px;
+            transition: animation 500ms ease-in-out, margin-right 500ms;
+            & .fa-check-circle{
+                color: #fff;
+            }
         }
     }
-    &__formula--price {
-        display: flex;
-        margin-left: auto;
-        align-items: flex-end;
-        font-weight: 900;
-        margin-right: 20px;
-    }
-    &__formula--check{
-        display: flex;
-        align-items: center;
-        background-color: $color-tertiary;
-        border-radius: 0 16px 16px 0;
-        margin-right: -68px;
-        padding: 20px;
-        font-size: 27px;
-        transition: animation 500ms ease-in-out, margin-right 500ms;
-        & .fa-check-circle{
-            color: #fff;
-        }
     }
     &--button {
         @include master-button;

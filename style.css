@@ -347,16 +347,16 @@ header {
 .menus h2 {
   margin-bottom: 32px;
 }
-.menus__restaurant {
+.menus .full-menus {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
   gap: 32px;
 }
-.menus .new {
+.menus .full-menus .alone-menu--new {
   position: relative;
 }
-.menus .new::before {
+.menus .full-menus .alone-menu--new::before {
   content: "Nouveau";
   position: absolute;
   height: 32px;
@@ -369,60 +369,63 @@ header {
   top: 16px;
   border-radius: 3px;
 }
-.menus__restaurant--card {
+.menus .full-menus .alone-menu {
   margin-bottom: 80px;
   min-height: 195px;
   min-width: 23%;
+  position: relative;
 }
 @media (max-width: 1400px) {
-  .menus__restaurant--card {
+  .menus .full-menus .alone-menu {
     min-width: 342px;
   }
 }
 @media (max-width: 350px) {
-  .menus__restaurant--card {
+  .menus .full-menus .alone-menu {
     min-height: 175px;
     min-width: 260px;
   }
 }
-.menus__restaurant--card .menus__restaurant--image {
+.menus .full-menus .alone-menu .container-heart {
+  position: absolute;
+  top: 226px;
+  right: 39px;
+}
+.menus .full-menus .alone-menu__screen {
   background-size: cover;
   border-radius: 16px 16px 0 0;
   height: 100%;
 }
-.menus__restaurant--card .menu-1 {
+.menus .full-menus .alone-menu .alone-menu__screen--menu-1 {
   background-image: url("images/menu-1.jpg");
 }
-.menus__restaurant--card .menu-2 {
+.menus .full-menus .alone-menu .alone-menu__screen--menu-2 {
   background-image: url("images/menu-2.jpg");
 }
-.menus__restaurant--card .menu-3 {
+.menus .full-menus .alone-menu .alone-menu__screen--menu-3 {
   background-image: url("images/menu-3.jpg");
 }
-.menus__restaurant--card .menu-4 {
+.menus .full-menus .alone-menu .alone-menu__screen--menu-4 {
   background-image: url("images/menu-4.jpg");
 }
-.menus__restaurant--card .menus__restaurant--note {
+.menus .full-menus .alone-menu__note {
   position: relative;
   background-color: #fff;
   padding: 4px;
   border-radius: 0 0 16px 16px;
   box-shadow: 0px 3px 8px 1px #cecece;
 }
-.menus__restaurant--card .menus__restaurant--note h3,
-.menus__restaurant--card .menus__restaurant--note p {
+.menus .full-menus .alone-menu__note h3, .menus .full-menus .alone-menu__note p {
   margin: 0px 8px 8px 8px;
 }
-.menus__restaurant--card .menus__restaurant--note h3 {
+.menus .full-menus .alone-menu__note h3 {
   padding-top: 8px;
 }
-.menus__restaurant--card .menus__restaurant--note .container {
-  font-size: 32px;
-  position: absolute;
-  right: 31px;
-  top: 14px;
+.menus .full-menus .alone-menu__note:hover {
+  background: #f2e8ff;
+  color: #9356DC;
 }
-.menus__restaurant--card input[type=checkbox] {
+.menus .full-menus .alone-menu input[type=checkbox] {
   height: 14px;
   width: 14px;
   background-color: transparent;
@@ -435,7 +438,7 @@ header {
   -webkit-appearance: none;
   cursor: pointer;
 }
-.menus__restaurant--card input[type=checkbox]:before {
+.menus .full-menus .alone-menu input[type=checkbox]:before {
   position: absolute;
   content: "";
   background-color: transparent;
@@ -447,7 +450,7 @@ header {
   border-radius: 75px 75px 0 0;
   right: 0;
 }
-.menus__restaurant--card input[type=checkbox]:after {
+.menus .full-menus .alone-menu input[type=checkbox]:after {
   position: absolute;
   content: "";
   background-color: transparent;
@@ -460,11 +463,11 @@ header {
   top: 3%;
   right: 79%;
 }
-.menus__restaurant--card input[type=checkbox]:checked {
+.menus .full-menus .alone-menu input[type=checkbox]:checked {
   background-image: linear-gradient(135deg, #9356DC 30%, #FF79DA);
 }
-.menus__restaurant--card input:checked[type=checkbox]:before,
-.menus__restaurant--card input:checked[type=checkbox]:after {
+.menus .full-menus .alone-menu input:checked[type=checkbox]:before,
+.menus .full-menus .alone-menu input:checked[type=checkbox]:after {
   background-color: #9356DC;
 }
 
@@ -580,14 +583,14 @@ header .return:hover {
   color: #99E2D0;
 }
 
-.preview__meal {
+.preview-meal {
   width: 100%;
   height: 562px;
   object-fit: cover;
   display: block;
 }
 @media (max-width: 1000px) {
-  .preview__meal {
+  .preview-meal {
     height: 204px;
   }
 }
@@ -612,14 +615,14 @@ main .box__heart--title {
   align-items: center;
   position: relative;
 }
-.box__heart .container {
+.box__heart .container-heart {
   position: absolute;
   right: 47px;
   top: 39px;
   font-size: 32px;
 }
 @media (max-width: 280px) {
-  .box__heart .container {
+  .box__heart .container-heart {
     font-size: 26px;
   }
 }
@@ -682,22 +685,22 @@ main .box__heart--title {
     gap: 0;
   }
 }
-.category__formula {
+.category .alone-formula {
   margin-bottom: 50px;
   overflow: hidden;
   white-space: nowrap;
 }
 @media (max-width: 1000px) {
-  .category__formula {
+  .category .alone-formula {
     margin-bottom: 0;
   }
 }
-.category__formula h3 {
+.category .alone-formula h3 {
   font-weight: initial;
   position: relative;
   margin: 25px 0 25px 0;
 }
-.category__formula h3::after {
+.category .alone-formula h3::after {
   content: "";
   position: absolute;
   height: 4px;
@@ -706,7 +709,7 @@ main .box__heart--title {
   left: 2px;
   background-color: #99E2D0;
 }
-.category__formula--full {
+.category .alone-formula__completed {
   display: flex;
   flex-direction: row;
   background-color: #fff;
@@ -718,39 +721,42 @@ main .box__heart--title {
   animation-duration: 1s;
   animation-fill-mode: both;
 }
-.category__formula--full:nth-child(1) {
+.category .alone-formula__completed:nth-child(1) {
   animation-delay: 200ms;
 }
-.category__formula--full:nth-child(2) {
+.category .alone-formula__completed:nth-child(2) {
   animation-delay: 400ms;
 }
-.category__formula--full:nth-child(3) {
+.category .alone-formula__completed:nth-child(3) {
   animation-delay: 600ms;
 }
-.category__formula--full:hover .category__formula--check {
+.category .alone-formula__completed:hover .alone-formula__description--check {
   margin-right: 0;
 }
-.category__formula--full:hover .category__formula--check .fa-check-circle {
+.category .alone-formula__completed:hover .alone-formula__description--check .fa-check-circle {
   animation: validate 500ms ease-in-out;
 }
-.category__formula--meal {
+.category .alone-formula__completed .alone-formula__description {
   padding: 8px;
   overflow: hidden;
 }
-.category__formula--meal h4,
-.category__formula--meal p {
+.category .alone-formula__completed .alone-formula__description h4,
+.category .alone-formula__completed .alone-formula__description p {
   margin: 10px;
   overflow: hidden;
   text-overflow: ellipsis;
 }
-.category__formula--price {
+.category .alone-formula__completed .alone-formula__description .meal_bold {
+  font-weight: 500;
+}
+.category .alone-formula__completed .alone-formula__description--price {
   display: flex;
   margin-left: auto;
   align-items: flex-end;
   font-weight: 900;
   margin-right: 20px;
 }
-.category__formula--check {
+.category .alone-formula__completed .alone-formula__description--check {
   display: flex;
   align-items: center;
   background-color: #99E2D0;
@@ -760,7 +766,7 @@ main .box__heart--title {
   font-size: 27px;
   transition: animation 500ms ease-in-out, margin-right 500ms;
 }
-.category__formula--check .fa-check-circle {
+.category .alone-formula__completed .alone-formula__description--check .fa-check-circle {
   color: #fff;
 }
 .category--button {
