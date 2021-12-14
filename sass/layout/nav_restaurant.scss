@@ -30,6 +30,9 @@
         list-style-type: none;
         transition: transform 200ms;
         @include box-shadow;
+        @media (max-width:350px){
+            font-size: 11px;
+        }
         &:hover{
             @include transform;
             background: #f2e8ff;

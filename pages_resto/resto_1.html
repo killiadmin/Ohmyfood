@@ -4,9 +4,127 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="apple-touch-icon" sizes="180x180" href="./../images/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./../images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./../images/favicon/favicon-16x16.png">
+    <script src="https://kit.fontawesome.com/32fcfa649a.js" crossorigin="anonymous"></script>
     <title>La palette du goût</title>
+    <link rel="stylesheet" href="../style.css">
 </head>
 <body>
-    
+    <header>
+        <div class="return">
+            <a href="../index.html">
+            <i class="fas fa-arrow-left"></i>
+            </a>
+        </div>
+        <h1>ohmyfood</h1>
+    </header>
+        <img class="preview-meal" src="../images/menu-1.jpg" alt="La palette du goût">
+    <main>
+        <div class="box__heart">
+            <h2 class="box__heart--title">La palette du goût</h2>
+            <div class="container-heart">
+                <input type="checkbox">
+            </div>
+        </div>
+        <section class="category">
+            <div class="alone-formula">
+                <h3>ENTRÉES</h3>
+                        <div class="alone-formula-list">
+                            <div class="alone-formula__completed">
+                                <div class="alone-formula__description">
+                                    <h4>Tartare de poulpe acidulé</h4>
+                                    <p>Aux zests d'orange</p>
+                                </div>
+                                    <p class="alone-formula__description--price">25€</p>
+                                    <a href="" onclick="return false" class="alone-formula__description--check"><i class="fas fa-check-circle"></i></a>
+                            </div>
+                            <div class="alone-formula__completed">
+                                <div class="alone-formula__description">
+                                    <h4>Velouté de légumes d'antan</h4>
+                                    <p>Carotte, panais, topinambour</p>
+                                </div>
+                                <p class="alone-formula__description--price">35€</p>
+                                <a href="" onclick="return false" class="alone-formula__description--check"><i class="fas fa-check-circle"></i></a>
+                            </div>
+                            <div class="alone-formula__completed">
+                                <div class="alone-formula__description">
+                                    <h4>Soupe à l'oignon</h4>
+                                    <p>Revisitée</p>
+                                </div>
+                                <p class="alone-formula__description--price">20€</p>
+                                <a href="" onclick="return false" class="alone-formula__description--check"><i class="fas fa-check-circle"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="alone-formula">
+                <h3>PLATS</h3>
+                <div class="alone-formula-list">
+                    <div class="alone-formula__completed">
+                        <div class="alone-formula__description">
+                                    <h4>Coquilles Saint-Jacques</h4>
+                                    <p>Accompagnée d'une purée de panais</p>
+                                </div>
+                                <p class="alone-formula__description--price">40€</p>
+                                <a href="" onclick="return false" class="alone-formula__description--check"><i class="fas fa-check-circle"></i></a>
+                            </div>
+                            <div class="alone-formula__completed">
+                                <div class="alone-formula__description">
+                                    <h4>Magret de canard</h4>
+                                    <p>Et parmentier de pommes de terres</p>
+                                </div>
+                                <p class="alone-formula__description--price">35€</p>
+                                <a href="" onclick="return false" class="alone-formula__description--check"><i class="fas fa-check-circle"></i></a>
+                            </div>
+                            <div class="alone-formula__completed">
+                                <div class="alone-formula__description">
+                                    <h4>Pigeonneau d'Ille-et-Vilaine</h4>
+                                    <p>Sur son lit de gnocchis aux légumes</p>
+                                </div>
+                                <p class="alone-formula__description--price">44€</p>
+                                <a href="" onclick="return false" class="alone-formula__description--check"><i class="fas fa-check-circle"></i></a>
+                            </div>
+                </div>
+                    </div>
+                    <div class="alone-formula">
+                <h3>DESSERTS</h3>
+                        <div class="alone-formula-list">
+                            <div class="alone-formula__completed">
+                                <div class="alone-formula__description">
+                                    <h4>Pétales de violettes glacés</h4>
+                                    <p>Et purée de noisettes</p>
+                                </div>
+                                <p class="alone-formula__description--price">18€</p>
+                                <a href="" onclick="return false" class="alone-formula__description--check"><i class="fas fa-check-circle"></i></a>
+                            </div>
+                            <div class="alone-formula__completed">
+                                <div class="alone-formula__description">
+                                    <h4>Fondant au chocolat</h4>
+                                    <p>Revisité</p>
+                                </div>
+                                <p class="alone-formula__description--price">22€</p>
+                                <a href="" onclick="return false" class="alone-formula__description--check"><i class="fas fa-check-circle"></i></a>
+                            </div>
+                            <div class="alone-formula__completed">
+                                <div class="alone-formula__description">
+                                    <h4>Millefeuille croustillant</h4>
+                                    <p class="meal_bold">Myrtilles et pâte d'amande</p>
+                                </div>
+                                <p class="alone-formula__description--price">23€</p>
+                                <a href="" onclick="return false" class="alone-formula__description--check"><i class="fas fa-check-circle"></i></a>
+                            </div>
+                        </div>
+            </div>
+            <a href="" class="category--button" onclick="return false"><p>Commander</p></a>
+        </section>        
+    </main>
+    <footer>
+        <h2>ohmyfood</h2>
+        <a href=""><i class ="fas fa-utensils"></i>Proposer un restaurant</a>
+        <a href=""><i class ="fas fa-hands-helping"></i>Devenir partenaire</a>
+        <a href="">Mentions légales</a>
+        <a href="mailto:killian.filatre@outlook.fr">Contact</a>
+    </footer>
 </body>
 </html>

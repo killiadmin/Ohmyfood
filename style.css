@@ -209,6 +209,16 @@ header {
   transition: transform 200ms;
   box-shadow: 0px 3px 8px 1px #cecece;
 }
+@media (max-width: 1000px) {
+  .reservation button {
+    font-size: 17px;
+  }
+}
+@media (max-width: 350px) {
+  .reservation button {
+    font-size: 10px;
+  }
+}
 .reservation button:hover {
   transform: scale(1.02);
   cursor: pointer;
@@ -280,6 +290,11 @@ header {
   list-style-type: none;
   transition: transform 200ms;
   box-shadow: 0px 3px 8px 1px #cecece;
+}
+@media (max-width: 350px) {
+  .nav__restaurant li {
+    font-size: 11px;
+  }
 }
 .nav__restaurant li:hover {
   transform: scale(1.02);
@@ -398,15 +413,19 @@ header {
 }
 .menus .full-menus .alone-menu .alone-menu__screen--menu-1 {
   background-image: url("images/menu-1.jpg");
+  background-position: center;
 }
 .menus .full-menus .alone-menu .alone-menu__screen--menu-2 {
   background-image: url("images/menu-2.jpg");
+  background-position: center;
 }
 .menus .full-menus .alone-menu .alone-menu__screen--menu-3 {
   background-image: url("images/menu-3.jpg");
+  background-position: center;
 }
 .menus .full-menus .alone-menu .alone-menu__screen--menu-4 {
   background-image: url("images/menu-4.jpg");
+  background-position: center;
 }
 .menus .full-menus .alone-menu__note {
   position: relative;
@@ -782,6 +801,16 @@ main .box__heart--title {
   grid-column: 2/3;
   margin: 32px auto 48px auto;
   transition: box-shadow 500ms, transform 500ms;
+}
+@media (max-width: 1000px) {
+  .category--button {
+    font-size: 17px;
+  }
+}
+@media (max-width: 350px) {
+  .category--button {
+    font-size: 10px;
+  }
 }
 @media (max-width: 1000px) {
   .category--button {
