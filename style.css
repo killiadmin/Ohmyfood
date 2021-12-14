@@ -220,6 +220,42 @@ header {
     border-radius: 50%;
   }
 }
+@keyframes validate {
+  from {
+    transform: rotate(-360deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
+}
+@keyframes fondue {
+  from {
+    transform: translateY(50%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes spinner {
+  0% {
+    transform: scale(1) rotate(360deg);
+  }
+  50% {
+    transform: scale(0.5) rotate(-360deg);
+  }
+  100% {
+    transform: scale(1) rotate(360deg);
+  }
+}
+@keyframes charging_out {
+  to {
+    transform: scale(0);
+    opacity: 0;
+    border-radius: 50%;
+  }
+}
 .reservation {
   text-align: center;
   background-color: #f2f2f2;
@@ -313,10 +349,7 @@ header {
     padding-left: 5px;
   }
 }
-.nav__restaurant ol li:hover i {
-  color: #9356DC;
-}
-.nav__restaurant li {
+.nav__restaurant ol li {
   position: relative;
   background-color: #f2f2f2;
   padding: 28px 32px;
@@ -328,20 +361,23 @@ header {
   box-shadow: 0px 3px 8px 1px #cecece;
 }
 @media (max-width: 350px) {
-  .nav__restaurant li {
+  .nav__restaurant ol li {
     font-size: 11px;
   }
 }
-.nav__restaurant li:hover {
+.nav__restaurant ol li:hover {
   transform: scale(1.02);
   background: #f2e8ff;
 }
-.nav__restaurant li i.fas {
+.nav__restaurant ol li:hover:hover i {
+  color: #9356DC;
+}
+.nav__restaurant ol li i.fas {
   margin-right: 16px;
   color: grey;
   font-size: 24px;
 }
-.nav__restaurant li span {
+.nav__restaurant ol li span {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -355,6 +391,78 @@ header {
   color: #fff;
 }
 
+@keyframes validate {
+  from {
+    transform: rotate(-360deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
+}
+@keyframes fondue {
+  from {
+    transform: translateY(50%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes spinner {
+  0% {
+    transform: scale(1) rotate(360deg);
+  }
+  50% {
+    transform: scale(0.5) rotate(-360deg);
+  }
+  100% {
+    transform: scale(1) rotate(360deg);
+  }
+}
+@keyframes charging_out {
+  to {
+    transform: scale(0);
+    opacity: 0;
+    border-radius: 50%;
+  }
+}
+@keyframes validate {
+  from {
+    transform: rotate(-360deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
+}
+@keyframes fondue {
+  from {
+    transform: translateY(50%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes spinner {
+  0% {
+    transform: scale(1) rotate(360deg);
+  }
+  50% {
+    transform: scale(0.5) rotate(-360deg);
+  }
+  100% {
+    transform: scale(1) rotate(360deg);
+  }
+}
+@keyframes charging_out {
+  to {
+    transform: scale(0);
+    opacity: 0;
+    border-radius: 50%;
+  }
+}
 @keyframes validate {
   from {
     transform: rotate(-360deg);
@@ -861,6 +969,42 @@ main .box__heart--title {
   transform: translate(0, 25%);
 }
 
+@keyframes validate {
+  from {
+    transform: rotate(-360deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
+}
+@keyframes fondue {
+  from {
+    transform: translateY(50%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes spinner {
+  0% {
+    transform: scale(1) rotate(360deg);
+  }
+  50% {
+    transform: scale(0.5) rotate(-360deg);
+  }
+  100% {
+    transform: scale(1) rotate(360deg);
+  }
+}
+@keyframes charging_out {
+  to {
+    transform: scale(0);
+    opacity: 0;
+    border-radius: 50%;
+  }
+}
 @keyframes validate {
   from {
     transform: rotate(-360deg);
