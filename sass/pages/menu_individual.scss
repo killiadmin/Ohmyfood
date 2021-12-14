@@ -58,7 +58,8 @@ main{
             font-size: 26px;
         }       
     }
-    @include heart;
+    @include heart-position-individual;
+    @include heart-color;
 }
 
 .category{

@@ -49,8 +49,7 @@ body {
   margin: 0;
   min-width: 280px;
 }
-
-a {
+body a {
   text-decoration: none;
   color: inherit;
 }
@@ -63,7 +62,7 @@ a {
   background-color: #99E2D0;
   gap: 8px;
   inset: 0;
-  z-index: 1;
+  z-index: 4;
   opacity: 0.8;
   animation: charging_out 150ms 3s forwards;
 }
@@ -79,36 +78,28 @@ a {
   animation: loader 1.2s infinite;
   animation-timing-function: cubic-bezier(0.16, 0.17, 1, 0.36);
 }
-
-.bar1 {
+.bar:nth-child(1) {
   animation-delay: 0.1s;
 }
-
-.bar2 {
+.bar:nth-child(2) {
   animation-delay: 0.2s;
 }
-
-.bar3 {
+.bar:nth-child(3) {
   animation-delay: 0.3s;
 }
-
-.bar4 {
+.bar:nth-child(4) {
   animation-delay: 0.4s;
 }
-
-.bar5 {
+.bar:nth-child(5) {
   animation-delay: 0.5s;
 }
-
-.bar6 {
+.bar:nth-child(6) {
   animation-delay: 0.6s;
 }
-
-.bar7 {
+.bar:nth-child(7) {
   animation-delay: 0.7s;
 }
-
-.bar8 {
+.bar:nth-child(8) {
   animation-delay: 0.8s;
 }
 
@@ -539,6 +530,7 @@ header {
   min-height: 195px;
   min-width: 23%;
   position: relative;
+  transition: transform 200ms;
 }
 @media (max-width: 1400px) {
   .menus .full-menus .alone-menu {
@@ -550,6 +542,9 @@ header {
     min-height: 175px;
     min-width: 260px;
   }
+}
+.menus .full-menus .alone-menu:hover {
+  transform: scale(1.04);
 }
 .menus .full-menus .alone-menu .container-heart {
   position: absolute;
@@ -582,6 +577,7 @@ header {
   background-color: #fff;
   padding: 4px;
   border-radius: 0 0 16px 16px;
+  z-index: 1;
   box-shadow: 0px 3px 8px 1px #cecece;
 }
 .menus .full-menus .alone-menu__note h3, .menus .full-menus .alone-menu__note p {
@@ -594,50 +590,38 @@ header {
   background: #f2e8ff;
   color: #9356DC;
 }
-.menus .full-menus .alone-menu input[type=checkbox] {
-  height: 14px;
-  width: 14px;
-  background-color: transparent;
-  position: relative;
-  outline: none;
-  -webkit-box-shadow: inset -2px -2px 0px 0px black;
-  -moz-box-shadow: inset -2px -2px 0px 0px black;
-  box-shadow: inset -2px -2px 0px 0px black;
-  transform: rotate(45deg);
-  -webkit-appearance: none;
+.menus .full-menus .alone-menu .far {
+  position: absolute;
+  font-size: 37px;
+  top: 213px;
+  right: 26px;
+  z-index: 2;
+}
+.menus .full-menus .alone-menu [id=heart], .menus .full-menus .alone-menu [id=heart-1], .menus .full-menus .alone-menu [id=heart-2], .menus .full-menus .alone-menu [id=heart-3] {
+  position: absolute;
+  left: -100vw;
+}
+.menus .full-menus .alone-menu [for=heart], .menus .full-menus .alone-menu [for=heart-1], .menus .full-menus .alone-menu [for=heart-2], .menus .full-menus .alone-menu [for=heart-3] {
+  color: #fff;
   cursor: pointer;
-}
-.menus .full-menus .alone-menu input[type=checkbox]:before {
   position: absolute;
-  content: "";
-  background-color: transparent;
-  border: 2px solid black;
-  border-bottom: none;
-  height: 84%;
-  width: 104%;
-  top: -78%;
-  border-radius: 75px 75px 0 0;
-  right: 0;
+  top: 214px;
+  right: 28px;
+  font-size: 32px;
+  transition: color 0.2s ease-in-out;
+  z-index: 3;
 }
-.menus .full-menus .alone-menu input[type=checkbox]:after {
-  position: absolute;
-  content: "";
-  background-color: transparent;
-  border: 2px solid black;
-  border-bottom: none;
-  height: 87%;
-  width: 108%;
-  transform: rotate(-90deg);
-  border-radius: 75px 75px 0 0;
-  top: 3%;
-  right: 79%;
+.menus .full-menus .alone-menu [for=heart]:hover, .menus .full-menus .alone-menu [for=heart-1]:hover, .menus .full-menus .alone-menu [for=heart-2]:hover, .menus .full-menus .alone-menu [for=heart-3]:hover,
+.menus .full-menus .alone-menu [for=heart-4]:hover, .menus .full-menus .alone-menu [for=heart-5]:hover, .menus .full-menus .alone-menu [for=heart-6]:hover, .menus .full-menus .alone-menu [for=heart-7]:hover {
+  color: #f2f2f2;
 }
-.menus .full-menus .alone-menu input[type=checkbox]:checked {
-  background-image: linear-gradient(135deg, #9356DC 30%, #FF79DA);
-}
-.menus .full-menus .alone-menu input:checked[type=checkbox]:before,
-.menus .full-menus .alone-menu input:checked[type=checkbox]:after {
-  background-color: #9356DC;
+.menus .full-menus .alone-menu [id=heart]:checked + label, .menus .full-menus .alone-menu [id=heart-1]:checked + label, .menus .full-menus .alone-menu [id=heart-2]:checked + label, .menus .full-menus .alone-menu [id=heart-3]:checked + label,
+.menus .full-menus .alone-menu [id=heart-4]:checked + label, .menus .full-menus .alone-menu [id=heart-5]:checked + label, .menus .full-menus .alone-menu [id=heart-6]:checked + label, .menus .full-menus .alone-menu [id=heart-7]:checked + label {
+  background-image: linear-gradient(#9356DC, #FF79DA);
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  will-change: font-size;
 }
 
 footer {
@@ -799,50 +783,38 @@ main .box__heart--title {
     font-size: 26px;
   }
 }
-.box__heart input[type=checkbox] {
-  height: 14px;
-  width: 14px;
-  background-color: transparent;
-  position: relative;
-  outline: none;
-  -webkit-box-shadow: inset -2px -2px 0px 0px black;
-  -moz-box-shadow: inset -2px -2px 0px 0px black;
-  box-shadow: inset -2px -2px 0px 0px black;
-  transform: rotate(45deg);
-  -webkit-appearance: none;
+.box__heart .far {
+  position: absolute;
+  font-size: 37px;
+  top: 32px;
+  right: 21px;
+  z-index: 2;
+}
+.box__heart [id=heart-4], .box__heart [id=heart-5], .box__heart [id=heart-6], .box__heart [id=heart-7] {
+  position: absolute;
+  left: -100vw;
+}
+.box__heart [for=heart-4], .box__heart [for=heart-5], .box__heart [for=heart-6], .box__heart [for=heart-7] {
+  color: #fff;
   cursor: pointer;
-}
-.box__heart input[type=checkbox]:before {
   position: absolute;
-  content: "";
-  background-color: transparent;
-  border: 2px solid black;
-  border-bottom: none;
-  height: 84%;
-  width: 104%;
-  top: -78%;
-  border-radius: 75px 75px 0 0;
-  right: 0;
+  top: 33px;
+  right: 23px;
+  font-size: 32px;
+  transition: color 0.2s ease-in-out;
+  z-index: 3;
 }
-.box__heart input[type=checkbox]:after {
-  position: absolute;
-  content: "";
-  background-color: transparent;
-  border: 2px solid black;
-  border-bottom: none;
-  height: 87%;
-  width: 108%;
-  transform: rotate(-90deg);
-  border-radius: 75px 75px 0 0;
-  top: 3%;
-  right: 79%;
+.box__heart [for=heart]:hover, .box__heart [for=heart-1]:hover, .box__heart [for=heart-2]:hover, .box__heart [for=heart-3]:hover,
+.box__heart [for=heart-4]:hover, .box__heart [for=heart-5]:hover, .box__heart [for=heart-6]:hover, .box__heart [for=heart-7]:hover {
+  color: #f2f2f2;
 }
-.box__heart input[type=checkbox]:checked {
-  background-image: linear-gradient(135deg, #9356DC 30%, #FF79DA);
-}
-.box__heart input:checked[type=checkbox]:before,
-.box__heart input:checked[type=checkbox]:after {
-  background-color: #9356DC;
+.box__heart [id=heart]:checked + label, .box__heart [id=heart-1]:checked + label, .box__heart [id=heart-2]:checked + label, .box__heart [id=heart-3]:checked + label,
+.box__heart [id=heart-4]:checked + label, .box__heart [id=heart-5]:checked + label, .box__heart [id=heart-6]:checked + label, .box__heart [id=heart-7]:checked + label {
+  background-image: linear-gradient(#9356DC, #FF79DA);
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  will-change: font-size;
 }
 
 .category {

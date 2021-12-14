@@ -91,12 +91,16 @@
         min-height: 195px;
         min-width: 23%;
         position: relative;
+        transition: transform 200ms;
         @include desktop-up{
             min-width: 342px;
         }
         @include mobile-350{
             min-height: 175px;
             min-width: 260px;
+        }
+        &:hover{
+            transform: scale(1.04);
         }
         & .container-heart{
             position: absolute;
@@ -122,6 +126,7 @@
             background-color: #fff;
             padding: 4px;
             border-radius: 0 0 16px 16px;
+            z-index: 1;
             @include box-shadow;
             & h3, 
             & p {
@@ -135,6 +140,7 @@
                 color: $color-primary
             }
         }
-        @include heart;
+        @include heart-position;
+        @include heart-color;
     }
 }
