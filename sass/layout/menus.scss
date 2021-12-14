@@ -53,7 +53,7 @@
     
             @for $i from 1 through 4 {
                 & .alone-menu__screen--menu-#{$i}{
-                    background-image: url("images/menu-#{$i}.jpg");
+                    background-image: url("images/menu-#{$i}.webp");
                     background-position: center;
                 }
             }
