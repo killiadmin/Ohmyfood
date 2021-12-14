@@ -13,6 +13,24 @@
     box-shadow: 0px 3px 8px 1px #cecece;
 }
 
+// Media_Queries
+
+@mixin desktop-up {
+  @media (max-width: 1400px) { @content; }
+}
+
+@mixin desktop-down {
+  @media (max-width: 1000px) { @content; }
+}
+
+@mixin mobile-350 {
+  @media (max-width: 350px) { @content; }
+}
+
+@mixin mobile-fold {
+  @media (max-width: 280px) { @content; }
+}
+
 // Heart_Like_Transform
 
 @mixin heart{

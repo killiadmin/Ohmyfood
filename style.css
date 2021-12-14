@@ -184,6 +184,42 @@ header {
   font-size: 28px;
 }
 
+@keyframes validate {
+  from {
+    transform: rotate(-360deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
+}
+@keyframes fondue {
+  from {
+    transform: translateY(50%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes spinner {
+  0% {
+    transform: scale(1) rotate(360deg);
+  }
+  50% {
+    transform: scale(0.5) rotate(-360deg);
+  }
+  100% {
+    transform: scale(1) rotate(360deg);
+  }
+}
+@keyframes charging_out {
+  to {
+    transform: scale(0);
+    opacity: 0;
+    border-radius: 50%;
+  }
+}
 .reservation {
   text-align: center;
   background-color: #f2f2f2;
@@ -825,6 +861,42 @@ main .box__heart--title {
   transform: translate(0, 25%);
 }
 
+@keyframes validate {
+  from {
+    transform: rotate(-360deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
+}
+@keyframes fondue {
+  from {
+    transform: translateY(50%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes spinner {
+  0% {
+    transform: scale(1) rotate(360deg);
+  }
+  50% {
+    transform: scale(0.5) rotate(-360deg);
+  }
+  100% {
+    transform: scale(1) rotate(360deg);
+  }
+}
+@keyframes charging_out {
+  to {
+    transform: scale(0);
+    opacity: 0;
+    border-radius: 50%;
+  }
+}
 @keyframes validate {
   from {
     transform: rotate(-360deg);

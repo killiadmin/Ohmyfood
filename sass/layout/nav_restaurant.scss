@@ -11,7 +11,7 @@
     & ol{
         display: flex;
         gap: 32px;
-        @media (max-width: 1000px) {
+        @include desktop-down {
             flex-direction: column;
             padding-left: 5px;
         }
@@ -30,7 +30,7 @@
         list-style-type: none;
         transition: transform 200ms;
         @include box-shadow;
-        @media (max-width:350px){
+        @include mobile-350{
             font-size: 11px;
         }
         &:hover{

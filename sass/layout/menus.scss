@@ -32,10 +32,10 @@
             min-height: 195px;
             min-width: 23%;
             position: relative;
-            @media (max-width: 1400px){
+            @include desktop-up{
                 min-width: 342px;
             }
-            @media (max-width: 350px){
+            @include mobile-350{
                 min-height: 175px;
                 min-width: 260px;
             }

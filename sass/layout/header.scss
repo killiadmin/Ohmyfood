@@ -10,7 +10,7 @@ header {
     position: relative;
     @include box-shadow;
     & h1 {
-        @media (max-width:1000px) {
+        @include desktop-down {
             margin: 0;
         }
     }

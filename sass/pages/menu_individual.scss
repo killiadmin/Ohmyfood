@@ -9,7 +9,7 @@ header{
         top: 32px;
         left: 44px;
         font-size: xx-large;
-        @media (max-width: 1000px){
+        @include desktop-down{
             top: 10px;
             left: 14px;
         }
@@ -24,7 +24,7 @@ header{
     height: 562px;
     object-fit: cover;
     display: block;
-    @media (max-width:1000px){
+    @include desktop-down{
         height: 204px;
     }
 
@@ -35,7 +35,7 @@ main{
         font-family: $font-title;
         margin: 30px auto 30px 15px;
         font-size: 30px;
-        @media (max-width: 280px){
+        @include mobile-fold{
             font-size: 24px;
         }
     }
@@ -54,7 +54,7 @@ main{
         right: 47px;
         top: 39px;
         font-size: 32px;
-        @media (max-width: 280px){
+        @include mobile-fold{
             font-size: 26px;
         }       
     }
@@ -67,7 +67,7 @@ main{
     grid-template-columns: repeat(3, 1fr);
     padding: 0 16px 0 16px;
     gap: 16px;
-    @media (max-width:1000px){
+    @include desktop-down{
         grid-template-columns: 1fr;
         gap: 0;
     }
@@ -75,7 +75,7 @@ main{
         margin-bottom: 50px;
         overflow: hidden;
         white-space: nowrap;
-        @media (max-width:1000px){
+        @include desktop-down{
             margin-bottom: 0;
         }
         & h3{
@@ -154,7 +154,7 @@ main{
         grid-column: 2 / 3;
         margin: 32px auto 48px auto;
         transition: box-shadow 500ms, transform 500ms;
-        @media (max-width:1000px){
+        @include desktop-down{
             grid-column: 1 / -1;
         }
         & p{
