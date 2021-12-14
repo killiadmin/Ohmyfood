@@ -93,7 +93,8 @@ main{
             }
     }
     &__completed{
-        @for $i from 1 through 3 {
+        @for $i from 1 through 4 {
+            // 4eme enfants "La note enchanté" = 4entrées 
             &:nth-child(#{$i}) {
                 animation-delay: 200ms * $i;                
             } 

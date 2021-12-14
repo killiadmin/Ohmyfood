@@ -893,6 +893,9 @@ main .box__heart--title {
 .category .alone-formula__completed:nth-child(3) {
   animation-delay: 600ms;
 }
+.category .alone-formula__completed:nth-child(4) {
+  animation-delay: 800ms;
+}
 .category .alone-formula__completed:hover .alone-formula__description--check {
   margin-right: 0;
 }
