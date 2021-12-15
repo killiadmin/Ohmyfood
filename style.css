@@ -597,6 +597,11 @@ header {
   right: 26px;
   z-index: 2;
 }
+@media (max-width: 350px) {
+  .menus .full-menus .alone-menu .far {
+    top: 193px;
+  }
+}
 .menus .full-menus .alone-menu [id=heart], .menus .full-menus .alone-menu [id=heart-1], .menus .full-menus .alone-menu [id=heart-2], .menus .full-menus .alone-menu [id=heart-3] {
   position: absolute;
   left: -100vw;
@@ -610,6 +615,11 @@ header {
   font-size: 32px;
   transition: color 0.2s ease-in-out;
   z-index: 3;
+}
+@media (max-width: 350px) {
+  .menus .full-menus .alone-menu [for=heart], .menus .full-menus .alone-menu [for=heart-1], .menus .full-menus .alone-menu [for=heart-2], .menus .full-menus .alone-menu [for=heart-3] {
+    top: 194px;
+  }
 }
 .menus .full-menus .alone-menu [for=heart]:hover, .menus .full-menus .alone-menu [for=heart-1]:hover, .menus .full-menus .alone-menu [for=heart-2]:hover, .menus .full-menus .alone-menu [for=heart-3]:hover,
 .menus .full-menus .alone-menu [for=heart-4]:hover, .menus .full-menus .alone-menu [for=heart-5]:hover, .menus .full-menus .alone-menu [for=heart-6]:hover, .menus .full-menus .alone-menu [for=heart-7]:hover {
@@ -757,9 +767,14 @@ main .box__heart--title {
   margin: 30px auto 30px 15px;
   font-size: 30px;
 }
-@media (max-width: 280px) {
+@media (max-width: 1000px) {
   main .box__heart--title {
-    font-size: 24px;
+    font-size: 26px;
+  }
+}
+@media (max-width: 350px) {
+  main .box__heart--title {
+    font-size: 21px;
   }
 }
 
