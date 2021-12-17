@@ -141,6 +141,11 @@ body a {
     background: #fff;
   }
 }
+input {
+  position: absolute;
+  left: -100vw;
+}
+
 header {
   font-family: "Shrikhand", "cursive";
   text-align: center;
@@ -207,6 +212,11 @@ header {
     background: #fff;
   }
 }
+input {
+  position: absolute;
+  left: -100vw;
+}
+
 @keyframes validate {
   from {
     transform: rotate(-360deg);
@@ -258,6 +268,11 @@ header {
   font-size: 16px;
   margin: 40px 16px 40px 16px;
   color: #4e4e4e;
+}
+@media (max-width: 1000px) {
+  .reservation p {
+    margin: 16px 16px 16px 16px;
+  }
 }
 .reservation button {
   color: #fff;
@@ -324,6 +339,11 @@ header {
     background: #fff;
   }
 }
+input {
+  position: absolute;
+  left: -100vw;
+}
+
 .nav__restaurant {
   padding: 24px 24px;
 }
@@ -420,6 +440,11 @@ header {
     background: #fff;
   }
 }
+input {
+  position: absolute;
+  left: -100vw;
+}
+
 @keyframes validate {
   from {
     transform: rotate(-360deg);
@@ -458,6 +483,11 @@ header {
     background: #fff;
   }
 }
+input {
+  position: absolute;
+  left: -100vw;
+}
+
 @keyframes validate {
   from {
     transform: rotate(-360deg);
@@ -602,11 +632,7 @@ header {
     top: 193px;
   }
 }
-.menus .full-menus .alone-menu [id=heart], .menus .full-menus .alone-menu [id=heart-1], .menus .full-menus .alone-menu [id=heart-2], .menus .full-menus .alone-menu [id=heart-3] {
-  position: absolute;
-  left: -100vw;
-}
-.menus .full-menus .alone-menu [for=heart], .menus .full-menus .alone-menu [for=heart-1], .menus .full-menus .alone-menu [for=heart-2], .menus .full-menus .alone-menu [for=heart-3] {
+.menus .full-menus .alone-menu label {
   color: #fff;
   cursor: pointer;
   position: absolute;
@@ -617,16 +643,11 @@ header {
   z-index: 3;
 }
 @media (max-width: 350px) {
-  .menus .full-menus .alone-menu [for=heart], .menus .full-menus .alone-menu [for=heart-1], .menus .full-menus .alone-menu [for=heart-2], .menus .full-menus .alone-menu [for=heart-3] {
+  .menus .full-menus .alone-menu label {
     top: 194px;
   }
 }
-.menus .full-menus .alone-menu [for=heart]:hover, .menus .full-menus .alone-menu [for=heart-1]:hover, .menus .full-menus .alone-menu [for=heart-2]:hover, .menus .full-menus .alone-menu [for=heart-3]:hover,
-.menus .full-menus .alone-menu [for=heart-4]:hover, .menus .full-menus .alone-menu [for=heart-5]:hover, .menus .full-menus .alone-menu [for=heart-6]:hover, .menus .full-menus .alone-menu [for=heart-7]:hover {
-  color: #f2f2f2;
-}
-.menus .full-menus .alone-menu [id=heart]:checked + label, .menus .full-menus .alone-menu [id=heart-1]:checked + label, .menus .full-menus .alone-menu [id=heart-2]:checked + label, .menus .full-menus .alone-menu [id=heart-3]:checked + label,
-.menus .full-menus .alone-menu [id=heart-4]:checked + label, .menus .full-menus .alone-menu [id=heart-5]:checked + label, .menus .full-menus .alone-menu [id=heart-6]:checked + label, .menus .full-menus .alone-menu [id=heart-7]:checked + label {
+.menus .full-menus .alone-menu input:checked + label {
   background-image: linear-gradient(#9356DC, #FF79DA);
   color: transparent;
   background-clip: text;
@@ -693,6 +714,11 @@ footer i {
     background: #fff;
   }
 }
+input {
+  position: absolute;
+  left: -100vw;
+}
+
 @keyframes validate {
   from {
     transform: rotate(-360deg);
@@ -805,11 +831,7 @@ main .box__heart--title {
   right: 21px;
   z-index: 2;
 }
-.box__heart [id=heart-4], .box__heart [id=heart-5], .box__heart [id=heart-6], .box__heart [id=heart-7] {
-  position: absolute;
-  left: -100vw;
-}
-.box__heart [for=heart-4], .box__heart [for=heart-5], .box__heart [for=heart-6], .box__heart [for=heart-7] {
+.box__heart label {
   color: #fff;
   cursor: pointer;
   position: absolute;
@@ -819,12 +841,7 @@ main .box__heart--title {
   transition: color 0.2s ease-in-out;
   z-index: 3;
 }
-.box__heart [for=heart]:hover, .box__heart [for=heart-1]:hover, .box__heart [for=heart-2]:hover, .box__heart [for=heart-3]:hover,
-.box__heart [for=heart-4]:hover, .box__heart [for=heart-5]:hover, .box__heart [for=heart-6]:hover, .box__heart [for=heart-7]:hover {
-  color: #f2f2f2;
-}
-.box__heart [id=heart]:checked + label, .box__heart [id=heart-1]:checked + label, .box__heart [id=heart-2]:checked + label, .box__heart [id=heart-3]:checked + label,
-.box__heart [id=heart-4]:checked + label, .box__heart [id=heart-5]:checked + label, .box__heart [id=heart-6]:checked + label, .box__heart [id=heart-7]:checked + label {
+.box__heart input:checked + label {
   background-image: linear-gradient(#9356DC, #FF79DA);
   color: transparent;
   background-clip: text;
@@ -1045,6 +1062,11 @@ main .box__heart--title {
     background: #fff;
   }
 }
+input {
+  position: absolute;
+  left: -100vw;
+}
+
 @keyframes validate {
   from {
     transform: rotate(-360deg);

@@ -1,5 +1,5 @@
 @import "../utils/utils.scss";
-@import "../components/components.scss";
+@import "../components/button_gradient.scss";
 
 .reservation{
     text-align: center;
@@ -13,6 +13,9 @@
         font-size: 16px;
         margin: 40px 16px 40px 16px;
         color: #4e4e4e;
+        @include desktop-down{
+            margin: 16px 16px 16px 16px;
+        }
     }
     & button{
         @include master-button;

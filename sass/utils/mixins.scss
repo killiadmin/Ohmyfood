@@ -1,5 +1,6 @@
 @import "../utils/animation.scss";
 @import "../utils/utils.scss";
+@import "../components/vignet_nav_restaurant.scss";
 
 // Transform
 
@@ -42,16 +43,10 @@
     z-index :2;
     @include mobile-350{
       top: 193px;
+    }    
     }
-    
-  }
-  
-  [id="heart"],[id="heart-1"],[id="heart-2"],[id="heart-3"] {
-    position: absolute;
-    left: -100vw;
-  }
-  
-  [for="heart"],[for="heart-1"],[for="heart-2"],[for="heart-3"] {
+      
+    label{
     color: #fff;
     cursor: pointer;
     position: absolute;
@@ -66,6 +61,7 @@
   }
 }
 
+
 // HEART MENU INDIVIDUAL
 
 @mixin heart-position-individual {
@@ -78,12 +74,7 @@
       
     }
     
-    [id="heart-4"],[id="heart-5"],[id="heart-6"],[id="heart-7"] {
-      position: absolute;
-      left: -100vw;
-    }
-    
-    [for="heart-4"],[for="heart-5"],[for="heart-6"],[for="heart-7"] {
+    label{
       color: #fff;
       cursor: pointer;
       position: absolute;
@@ -97,14 +88,13 @@
 
     // HEART COLOR 
 
-  @mixin heart-color {
-    [for="heart"]:hover,[for="heart-1"]:hover,[for="heart-2"]:hover,[for="heart-3"]:hover,
-    [for="heart-4"]:hover,[for="heart-5"]:hover,[for="heart-6"]:hover,[for="heart-7"]:hover {
-      color: $color-grey;
+    input{
+      position: absolute;
+      left: -100vw;
     }
-    
-    [id="heart"]:checked + label,[id="heart-1"]:checked + label ,[id="heart-2"]:checked + label,[id="heart-3"]:checked + label,
-    [id="heart-4"]:checked + label,[id="heart-5"]:checked + label ,[id="heart-6"]:checked + label,[id="heart-7"]:checked + label {
+
+  @mixin heart-color {
+      input:checked + label{
       background-image: linear-gradient($color-primary,$color-secondary);
       color: transparent;
       background-clip: text;

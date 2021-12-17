@@ -1,0 +1,42 @@
+@mixin vignet-nav {
+    & li{
+        position: relative;
+        background-color: $color-grey;
+        padding: 28px 32px;
+        flex-grow: 1;
+        border-radius: 16px;
+        cursor: pointer;
+        list-style-type: none;
+        transition: transform 200ms;
+        @include box-shadow;
+        @include mobile-350{
+            font-size: 11px;
+        }
+        &:hover{
+            @include transform;
+            background: #f2e8ff;
+            &:hover i{
+                color: $color-primary;
+            }
+        }
+        & i.fas{
+            margin-right: 16px;
+            color: grey; 
+            font-size: 24px;
+        }
+        
+            & span{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                position: absolute;
+                bottom: 24px;
+                left: -16px;
+                height: 32px;
+                width: 32px;
+                border-radius: 50%;
+                background-color: $color-primary;
+                color: #fff;
+            }
+        }
+}
